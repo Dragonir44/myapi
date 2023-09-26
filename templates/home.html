@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block header %}
+    <h1>Liste des films</h1>
+{% endblock %}
+
+{% block content %}
+    {% for picture in pictures %}
+        <a href="/api/picture/{{picture['id']}}">{{ picture.title }}</a> <br>
+    {% endfor %}
+{% endblock %}
